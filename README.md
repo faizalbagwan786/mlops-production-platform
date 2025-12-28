@@ -211,3 +211,22 @@ git push
 ```
 
 
+## Common Issues & Fixes
+
+Below are some common issues encountered during development and deployment, along with their resolutions:
+
+- **PEP 668: Externally Managed Python Environment**  
+  On Ubuntu 24.04, global `pip install` is restricted. This was resolved by creating and using a Python virtual environment:
+  ```bash
+  python3 -m venv venv
+  source venv/bin/activate
+  pip install -r requirements.txt
+
+500 Internal Server Error – Model Not Loaded
+The inference API returned a Model not loaded error when the trained model artifact was missing. Running the training pipeline generated the required model file before starting the API.
+
+Docker Build Context Errors
+Docker builds failed when executed from an incorrect directory. This was fixed by running the build command from the project root and ensuring all required files were included in the build context.
+
+These issues are representative of real-world MLOps challenges related to environment management, artifact handling, and containerization.
+
