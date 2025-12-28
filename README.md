@@ -8,24 +8,25 @@ This project focuses on **engineering best practices, automation, and maintainab
 ## Project Structure
 
 mlops-production-platform/
-├── app/ # FastAPI application for inference
-│ ├── main.py
-│ ├── model_loader.py
-│ ├── schema.py
-│ └── model/ # Generated model artifacts (not versioned)
-├── training/ # Training and evaluation logic
-│ ├── train.py
-│ └── evaluate.py
-├── data/ # Data storage
-│ ├── raw/
-│ │ └── churn.csv
-│ └── processed/
-├── pipelines/ # Automation & orchestration (future)
-├── monitoring/ # Monitoring & observability (future)
-├── docker/ # Docker configuration
-│ └── Dockerfile
+├── app/                         # FastAPI application for inference
+│   ├── main.py
+│   ├── model_loader.py
+│   ├── schema.py
+│   └── model/                   # Generated model artifacts (not versioned)
+├── training/                    # Training and evaluation logic
+│   ├── train.py
+│   └── evaluate.py
+├── data/                        # Data storage
+│   ├── raw/
+│   │   └── churn.csv
+│   └── processed/
+├── pipelines/                   # Automation & orchestration (future)
+├── monitoring/                  # Monitoring & observability (future)
+├── docker/                      # Docker configuration
+│   └── Dockerfile
 ├── requirements.txt
 └── README.md
+
 
 
 ---
