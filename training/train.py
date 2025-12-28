@@ -2,12 +2,12 @@ import pandas as pd
 import joblib
 import os
 
+from evaluate import evaluate_model
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score
 
 
 print("Step 1: Loading data")
@@ -66,10 +66,10 @@ model.fit(X_train, y_train)
 
 print("Step 8: Evaluate model")
 
-preds = model.predict(X_test)
-accuracy = accuracy_score(y_test, preds)
+passed, accuracy = evaluate_model(model, X_test, y_test)
 
-print(f"Model accuracy: {accuracy}")
+if not passed:
+    raise ValueError("Model did not meet evaluation criteria. Aborting save.")
 
 
 print("Step 9: Save model")
