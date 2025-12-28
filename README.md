@@ -6,24 +6,29 @@ A modular, production-grade MLOps platform designed to streamline the lifecycle 
 
 ## Project Structure
 
-.
-├── app/ # FastAPI application for model serving
-│ ├── main.py
-│ ├── model_loader.py
-│ ├── schema.py
-│ └── model/
-├── training/ # Model training and evaluation scripts
-│ ├── train.py
-│ └── evaluate.py
-├── pipelines/ # Orchestration and automation pipelines
-├── data/ # Data storage
-│ ├── raw/
-│ │ └── churn.csv
-│ └── processed/
-├── monitoring/ # Monitoring and observability components
-├── docker/ # Containerization assets
-├── requirements.txt
-└── README.md
+```
+mlops-production-platform/
+├── app/                        # FastAPI application for model serving
+│   ├── main.py
+│   ├── model_loader.py
+│   ├── schema.py
+│   ├── model/                  # Model artifacts
+│   │   └── churn_model.pkl
+│   └── __pycache__/
+├── training/                   # Model training and evaluation scripts
+│   ├── train.py
+│   ├── evaluate.py
+│   └── __pycache__/
+├── pipelines/                  # Orchestration and automation pipelines
+├── data/                       # Data storage
+│   ├── raw/
+│   │   └── churn.csv
+│   └── processed/
+├── monitoring/                 # Monitoring and observability components
+├── docker/                     # Containerization assets
+├── requirements.txt            # Project dependencies
+└── README.md                   # Project documentation
+```
 
 
 ---
