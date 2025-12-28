@@ -1,0 +1,7 @@
+age,monthly_charges,tenure,contract_type,churn
+25,2000,5,month-to-month,1
+45,3500,24,one-year,0
+30,2500,10,month-to-month,1
+50,4000,36,two-year,0
+23,1800,3,month-to-month,1
+60,5000,60,two-year,0
