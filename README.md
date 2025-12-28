@@ -7,6 +7,8 @@ This project focuses on **engineering best practices, automation, and maintainab
 
 ## Project Structure
 
+
+```text
 mlops-production-platform/
 ├── app/                         # FastAPI application for inference
 │   ├── main.py
@@ -26,6 +28,7 @@ mlops-production-platform/
 │   └── Dockerfile
 ├── requirements.txt
 └── README.md
+```
 
 
 
